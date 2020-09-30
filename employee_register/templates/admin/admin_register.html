@@ -1,0 +1,24 @@
+{% extends 'admin/adminbase.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="" method='post' autocompletes='off'>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-4">
+            {{adminform.firstname|as_crispy_field}}
+        </div>
+        <div class="col-md-8">
+            {{adminform.lastname|as_crispy_field}}
+        </div>
+    </div>
+    {{adminform.email|as_crispy_field}}
+    {{adminform.mobile|as_crispy_field}}
+    {{adminform.password|as_crispy_field}}
+    
+    <button type="submit" class="btn btn-success "> Register</button>
+   
+</form>
+<script>
+    document.getElementById("title").innerHTML = "Register Your Self";
+</script>
+{% endblock content %}
