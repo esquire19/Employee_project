@@ -1,7 +1,7 @@
  
 
 class addition:
-    sum=0
+    sum=0,num=0
     def summation(num):
         
         rem = num%10
